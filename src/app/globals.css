@@ -1,0 +1,149 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-page: #FAF8F5;
+    --bg-surface: #FFFFFF;
+    --bg-surface-warm: #F4EFE6;
+    --border-warm: #EAE3D6;
+    --border-hover: #D8CEBD;
+    --text-primary: #1C1917;
+    --text-muted: #57534E;
+    --text-light: #78716C;
+    --royal-emerald: #0B6B58;
+    --royal-emerald-hover: #085546;
+    --royal-emerald-light: #E7F3F0;
+    --kesari-saffron: #E0580C;
+    --kesari-saffron-light: #FFEDE3;
+    --marigold-gold: #D97706;
+    --marigold-gold-light: #FEF3C7;
+    --sindoor-crimson: #D93829;
+    --sindoor-crimson-hover: #B9281B;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    color-scheme: light;
+  }
+
+  body {
+    background-color: var(--bg-page);
+    color: var(--text-primary);
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    overflow-x: hidden;
+    selection-background-color: #0B6B58;
+    selection-color: #FFFFFF;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAF8F5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D8CEBD;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0B6B58;
+}
+
+/* Indian Traditional Floral & Mandala SVG Background Patterns */
+.bg-mandala-pattern {
+  background-image: radial-gradient(rgba(11, 107, 88, 0.04) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.bg-rangoli-dots {
+  background-image: 
+    radial-gradient(circle at 50% 50%, rgba(224, 88, 12, 0.05) 2px, transparent 2px),
+    radial-gradient(circle at 0% 0%, rgba(11, 107, 88, 0.04) 1.5px, transparent 1.5px);
+  background-size: 40px 40px;
+}
+
+/* Indian Traditional Card Utilities */
+.indian-card {
+  background: #FFFFFF;
+  border: 1px solid var(--border-warm);
+  border-radius: 1.25rem;
+  box-shadow: 0 4px 20px -2px rgba(28, 25, 23, 0.04), 0 2px 6px -1px rgba(28, 25, 23, 0.02);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.indian-card:hover {
+  border-color: #D8CEBD;
+  box-shadow: 0 16px 36px -6px rgba(11, 107, 88, 0.1), 0 6px 14px -2px rgba(28, 25, 23, 0.04);
+  transform: translateY(-3px);
+}
+
+.indian-card-gold {
+  background: #FFFFFF;
+  border: 1px solid rgba(217, 119, 6, 0.25);
+  box-shadow: 0 8px 30px -4px rgba(217, 119, 6, 0.08);
+}
+
+.indian-card-emerald {
+  background: #FFFFFF;
+  border: 1px solid rgba(11, 107, 88, 0.25);
+  box-shadow: 0 8px 30px -4px rgba(11, 107, 88, 0.08);
+}
+
+/* Serif Headline Utilities */
+.font-heritage-serif {
+  font-family: var(--font-playfair), "Playfair Display", "Georgia", "Cambria", "Times New Roman", serif;
+  letter-spacing: -0.02em;
+}
+
+/* Traditional Text Gradients */
+.text-gradient-emerald {
+  background: linear-gradient(135deg, #0B6B58 0%, #064E3B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-saffron {
+  background: linear-gradient(135deg, #E0580C 0%, #B45309 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, #B45309 0%, #D97706 50%, #EAB308 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Floating animation */
+@keyframes traditional-float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(0.5deg);
+  }
+}
+
+.animate-traditional-float {
+  animation: traditional-float 5s ease-in-out infinite;
+}
+
+@keyframes gentle-pulse {
+  0%, 100% {
+    opacity: 0.85;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.03);
+  }
+}
+
+.animate-gentle-pulse {
+  animation: gentle-pulse 3s ease-in-out infinite;
+}
